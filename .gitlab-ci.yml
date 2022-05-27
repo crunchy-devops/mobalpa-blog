@@ -6,8 +6,8 @@ build mobalpa-blog:
     script:
       - export IMAGE_TAG="$CI_JOB_NAME"
       - export IMAGE_TAG_V="$CI_COMMIT_SHORT_SHA"
-      - ls -alrt
-      - docker build -t mobalpa-blog:0705 .
+      - echo "docker build -t $CI_JOB_NAME:$CI_COMMIT_SHORT_SHA ."
+      #- docker build -t mobalpa-blog:0705 .
 
 
 
