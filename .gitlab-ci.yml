@@ -11,7 +11,7 @@ build mobalpa-blog:
       #- echo $CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA
       - docker build -t $CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA .
       - chmod +x cleanup-container.sh
-      - cleanup-container.sh
+      - bash cleanup-container.sh
       - docker run -d --name web -p 8080:80 --link dbm:mysql $CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA
 
 build mobalpa-test:
