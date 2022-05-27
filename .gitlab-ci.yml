@@ -1,13 +1,6 @@
 stages:
     - docker-build
-
-build mobalpa-test:
-    stage: test
-    script:
-      - phpcs . > analyze.blog
-      - grep
-
-
+    - test
 
 build mobalpa-blog:
     stage: docker-build
@@ -16,7 +9,10 @@ build mobalpa-blog:
       - docker build -t $CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA .
       - docker run -d -name web -p 8080:80 --link dbm:mysql $CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA
 
-
+build mobalpa-test:
+    stage: test
+    script:
+      - docker exec -it web phpcs . > analyze.blog
 
 
 
