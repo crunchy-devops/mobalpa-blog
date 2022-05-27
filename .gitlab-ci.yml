@@ -1,0 +1,22 @@
+stages:
+    - docker-build
+
+build mobalpa-blog:
+    stage: docker-build
+    script:
+      - export IMAGE_TAG="$CI_REGISTRY_IMAGE/$CI_JOB_NAME:$CI_COMMIT_REF_NAME"
+      - export IMAGE_TAG_V="$CI_REGISTRY_IMAGE/$CI_JOB_NAME:$VERSION"
+      - echo "TAGS == $IMAGE_TAG == $IMAGE_TAG_V"
+      - cd $CI_JOB_NAME
+      - docker build -t $IMAGE_TAG -t IMAGE_TAG_V
+
+
+
+
+
+
+        
+
+
+      
+
