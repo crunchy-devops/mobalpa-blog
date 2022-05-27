@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="51.255.211.169" id="9052a8f0-da4b-470b-9b56-3ba9a27d5ed9" port="22" customName="gitlab" nameFormat="CUSTOM" username="ubuntu">
+        <option name="customName" value="gitlab" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>
