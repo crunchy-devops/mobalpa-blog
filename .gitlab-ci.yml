@@ -31,7 +31,7 @@ build mobalpa-analyze:
       - grep "ERROR" analyze.log | wc -l
     artifacts:
       paths:
-        - analyze.log
+      - analyze.log
       expire_in : 1 week
 
 
