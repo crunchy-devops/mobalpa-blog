@@ -17,7 +17,7 @@ build mobalpa-blog:
 build mobalpa-test:
     stage: test
     script:
-      - docker exec web phpcs --runtime-set ignore_warnings_on_exit 2 add_article.php 
+      - docker exec web phpcs --runtime-set ignore_warnings_on_exit 2 add_article.php
 
 
 
