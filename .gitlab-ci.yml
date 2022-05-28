@@ -17,7 +17,7 @@ build mobalpa-blog:
 build mobalpa-test:
     stage: test
     script:
-      - docker exec web phpcs --help
+      - docker exec web phpcs add_article.php
 
 
 
