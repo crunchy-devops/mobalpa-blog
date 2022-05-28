@@ -1,7 +1,7 @@
 stages:
     - docker-build
     - test
-    - analyze
+    #- analyze
 
 build mobalpa-blog:
     stage: docker-build
@@ -18,8 +18,7 @@ build mobalpa-blog:
 build mobalpa-test:
     stage: test
     script:
-      - sleep 5m
-      - docker exec web phpcs . > /tmp/analyze.log
+      - docker exec web which phpcs
 
 
 build mobalpa-analyze:
