@@ -2,6 +2,7 @@ stages:
     - docker-build
     - test
     - analyze
+    - deploy
 
 build mobalpa-blog:
     stage: docker-build
