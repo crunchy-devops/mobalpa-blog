@@ -19,7 +19,7 @@ build mobalpa-test:
     allow_failure: true
     script:
       #- sleep 1h
-      - docker exec web ls -alrt
+      - docker exec web /usr/local/bin/phpcs . 
 
 
 
