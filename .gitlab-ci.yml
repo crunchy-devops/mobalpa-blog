@@ -18,6 +18,7 @@ build mobalpa-blog:
 build mobalpa-test:
     stage: test
     script:
+      - sleep 5m
       - docker exec web phpcs . > /tmp/analyze.log
 
 
