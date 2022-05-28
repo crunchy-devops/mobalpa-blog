@@ -5,7 +5,7 @@ RUN apk add --no-cache  --repository http://dl-cdn.alpinelinux.org/alpine/edge/c
 
 RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && \
     cp phpcs.phar /usr/local/bin/phpcs && \
-    chmod +x /usr/local/bin/phpcs &&  \
+    chmod +x /usr/local/bin/phpcs &&  
     #phpcs --config-set show_progress 1 && \
     #phpcs --config-set colors 1 && \
     #phpcs --config-set report_width 140 && \
