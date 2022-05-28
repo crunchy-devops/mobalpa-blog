@@ -27,7 +27,7 @@ build mobalpa-analyze:
     stage: analyze
     script:
       - docker cp web:/tmp/analyze.log .
-      - echo "VERSION=$(grep 'ERROR' analyze.log | wc -l ) > vars.env
+      - echo "ERROR=$(grep 'ERROR' analyze.log | wc -l )" > vars.env
     artifacts:
       paths:
         - analyze.log
