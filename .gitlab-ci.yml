@@ -24,9 +24,16 @@ build mobalpa-test:
 
 build mobalpa-analyze:
     stage: analyze
+    dependencies:
+      - test
     script:
       - docker cp web:/tmp/analyze.log .
       - grep "ERROR" analyze.log | wc -l
+    artifacts:
+      paths:
+        - analyze.log
+      expire_in : 1 week
+
 
 
 
