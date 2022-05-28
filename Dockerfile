@@ -1,7 +1,7 @@
 FROM httpd:2.4.53-alpine3.16
 
 RUN apk add --no-cache  --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
-    php php-dom php-iconv php-phar php-zlib curl php-tokenizer php-xmlwriter php-simplexml
+    php bash php-dom php-iconv php-phar php-zlib curl php-tokenizer php-xmlwriter php-simplexml
 
 
 RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && \
