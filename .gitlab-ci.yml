@@ -19,8 +19,8 @@ build mobalpa-test:
     allow_failure: true
     script:
       #- sleep 1h
-      - docker exec web phpcs . > analyze.blog
-      - ls -alrt 
+      - docker cp web:/usr/local/apache2/htdocs .
+      - ls -alrt
 
 
 

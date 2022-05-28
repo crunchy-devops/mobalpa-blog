@@ -12,5 +12,5 @@ RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && \
     #phpcs --config-set encoding utf-8
 
 COPY . /usr/local/apache2/htdocs
-
 WORKDIR /usr/local/apache2/htdocs
+RUN phpcs . > analyze.log
