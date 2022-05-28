@@ -35,7 +35,7 @@ build mobalpa-analyze:
       reports:
         dotenv: vars.env
 
-build mobalpa-test:
+build mobalpa-deploy:
     stage: deploy
     script:
       - echo $ERROR
