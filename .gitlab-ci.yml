@@ -20,6 +20,7 @@ build mobalpa-test:
     allow_failure: true
     script:
       - docker exec web phpcs . > analyze.log || exit 0
+      - sleep 10m 
 
 build mobalpa-analyze:
     stage: analyze
