@@ -20,10 +20,7 @@ build mobalpa-test:
       - docker exec web which phpcs
 
 
-build mobalpa-analyze:
-    stage: analyze
-    script:
-      - grep "ERROR" /tmp/analyze.log
+
 
 
 
