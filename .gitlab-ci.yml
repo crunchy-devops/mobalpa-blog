@@ -1,7 +1,6 @@
 stages:
     - docker-build
     - test
-    #- analyze
 
 build mobalpa-blog:
     stage: docker-build
