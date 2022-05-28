@@ -19,7 +19,7 @@ build mobalpa-test:
     stage: test
     allow_failure: true
     script:
-      - bash analyze.sh
+      - docker exec web bash analyze.sh
 
 
 build mobalpa-analyze:
