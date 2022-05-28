@@ -9,7 +9,7 @@ WORKDIR /usr/local/apache2/htdocs
 RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && \
     mv phpcs.phar /usr/local/bin/phpcs && \
     chmod +x /usr/local/bin/phpcs && \
-    phpcs . > analyze.log
+    #phpcs  > analyze.log
     #phpcs --config-set show_progress 1 && \
     #phpcs --config-set colors 1 && \
     #phpcs --config-set report_width 140 && \
