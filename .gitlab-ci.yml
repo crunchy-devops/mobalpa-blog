@@ -17,7 +17,8 @@ build mobalpa-blog:
 build mobalpa-test:
     stage: test
     script:
-      - docker exec web phpcs  add_article.php || exit 0
+      - docker exec web phpcs . > /tmp/analyze.log || exit 0
+    artifacts:
 
 
 
