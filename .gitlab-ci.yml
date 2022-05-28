@@ -1,6 +1,7 @@
 stages:
     - docker-build
     - test
+    - analyze
 
 build mobalpa-blog:
     stage: docker-build
@@ -19,7 +20,17 @@ build mobalpa-test:
     allow_failure: true
     script:
       #- sleep 1h
-      - docker exec web /usr/local/bin/phpcs .
+      - docker exec web /usr/local/bin/phpcs . > /tmp/analyze.log
+    artifacts:
+      paths:
+        - /tmp
+
+build mobalpa-analyze:
+    stage: analyze
+    allow_failure: true
+    script:
+      - grep "ERROR" /tmp/analyze.log
+
 
 
 
