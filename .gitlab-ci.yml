@@ -18,7 +18,7 @@ build mobalpa-test:
     stage: test
     allow_failure: true
     script:
-      - sleep 1h
+      #- sleep 1h
       - phpcs . > analyze.blog
 
 
