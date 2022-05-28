@@ -17,7 +17,6 @@ build mobalpa-blog:
 
 build mobalpa-test:
     stage: test
-    allow_failure: true
     script:
       - docker exec web phpcs . > /tmp/analyze.log
 
@@ -25,7 +24,7 @@ build mobalpa-test:
 build mobalpa-analyze:
     stage: analyze
     script:
-      - docker exec web grep "ERROR" /tmp/analyze.log
+      - grep "ERROR" /tmp/analyze.log
 
 
 
