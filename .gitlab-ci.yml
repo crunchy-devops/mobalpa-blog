@@ -20,6 +20,7 @@ build mobalpa-test:
     script:
       #- sleep 1h
       - docker exec web phpcs . > analyze.blog
+      - ls -alrt 
 
 
 
