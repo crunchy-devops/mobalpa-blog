@@ -13,4 +13,4 @@ RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && \
 
 COPY . /usr/local/apache2/htdocs
 WORKDIR /usr/local/apache2/htdocs
-RUN /usr/local/bin/phpcs . > analyze.log
+RUN sh /usr/local/bin/phpcs . > analyze.log
