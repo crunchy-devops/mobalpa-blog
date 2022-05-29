@@ -20,7 +20,8 @@ build mobalpa-test:
     stage: test
     allow_failure: true
     script:
-      - bash /usr/local/apache2/htdocs/analyze.sh
+      - ls  -alrt
+      
 
 
 build mobalpa-analyze:
