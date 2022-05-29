@@ -1,4 +1,4 @@
 #! /bin/bash
-phpcs . > analyze.log
-ls -alrt
+mkdir /tmp/
+phpcs . > /tmp/analyze.log
 exit 0
