@@ -20,8 +20,8 @@ build mobalpa-test:
     stage: test
     allow_failure: true
     script:
-      - ls  -alrt
-      
+      - bash analyze.sh
+
 
 
 build mobalpa-analyze:
