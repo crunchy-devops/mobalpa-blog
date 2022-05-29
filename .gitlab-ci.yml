@@ -20,14 +20,13 @@ build mobalpa-test:
     stage: test
     allow_failure: true
     script:
-      - docker exec web bash /usr/local/apache2/htdocs/analyze.sh
+      - bash /usr/local/apache2/htdocs/analyze.sh
 
 
 build mobalpa-analyze:
     stage: analyze
     script:
-      - docker cp web:/tmp/analyze.log .
-      - echo "ERROR=$(grep 'ERROR' analyze.log | wc -l )" > vars.env
+      - echo "ERROR=$(grep 'ERROR' /tmp/analyze.log | wc -l )" > vars.env
     artifacts:
       paths:
         - analyze.log
