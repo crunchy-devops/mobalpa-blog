@@ -1,3 +1,3 @@
 #! /bin/bash
-phpcs . > /tmp/analyze.log
+phpcs . > analyze.log
 exit 0
