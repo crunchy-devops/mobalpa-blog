@@ -1,4 +1,4 @@
 #! /bin/bash
-mkdir /tmp/
-phpcs . > /tmp/analyze.log
+mkdir /tmp/log
+phpcs . > /tmp/log/analyze.log
 exit 0
