@@ -20,6 +20,7 @@ build mobalpa-test:
     stage: test
     allow_failure: true
     script:
+      - phpcs .  || exit 0
       - bash analyze.sh
 
 
