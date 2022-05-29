@@ -18,17 +18,12 @@ build mobalpa-blog:
 
 build mobalpa-test:
     stage: test
-    allow_failure: true
     script:
       - bash analyze.sh
-
-
-
 
 build mobalpa-analyze:
     stage: analyze
     script:
-      - sleep 1h
       - echo "ERROR=$(grep 'ERROR' /tmp/log/analyze.log | wc -l )" > vars.env
     artifacts:
       paths:
