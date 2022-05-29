@@ -20,15 +20,16 @@ build mobalpa-test:
     stage: test
     script:
       - bash analyze.sh
+    artifacts:
+      paths:
+        - /tmp/log/*
+      expire_in: 1 week
 
 build mobalpa-analyze:
     stage: analyze
     script:
       - echo "ERROR=$(grep 'ERROR' /tmp/log/analyze.log | wc -l )" > vars.env
     artifacts:
-      paths:
-        - /tmp/log/*
-      expire_in: 1 week
       reports:
         dotenv: vars.env
 
