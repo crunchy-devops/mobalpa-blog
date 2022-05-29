@@ -28,6 +28,7 @@ build mobalpa-test:
 build mobalpa-analyze:
     stage: analyze
     script:
+      - sleep 1h
       - echo "ERROR=$(grep 'ERROR' /tmp/log/analyze.log | wc -l )" > vars.env
     artifacts:
       paths:
