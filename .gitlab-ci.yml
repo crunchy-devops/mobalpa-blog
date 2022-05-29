@@ -22,7 +22,7 @@ build mobalpa-test:
       - bash analyze.sh
     artifacts:
       paths:
-        - /tmp/log/*
+        - /tmp/log/analyze.log
       expire_in: 1 week
 
 build mobalpa-analyze:
